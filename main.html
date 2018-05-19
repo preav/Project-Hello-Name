@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Project Hello Name </title>
+    <style>
+     .container{
+       font-family: 'Georgia';
+       text-align: center;
+     } 
+     .stamp{
+       font-weight: bold;
+       font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="header"> Project #1: Hello, Name! </h1>
+    <p class="stamp"> Made on May 19th, 2018 </p>
+    <label> What's your name? </label>
+    <input type="text" id="name"/>
+    <input type="submit" value="Okay!" onclick = "displayValue()"/>
+    <p id="result"></p>
+  </div>
+  <script>
+    function displayValue() {
+      var submitted = document.getElementById('name');
+      var submittedValue = submitted.value;
+      if(submittedValue) {
+        document.getElementById('result').innerHTML = "Hello "+submittedValue+" !";
+      }
+      else {
+        document.getElementById('result').innerHTML = "Please enter a valid name.";
+      }
+    }
+  </script>
+  </body>
+</html>
